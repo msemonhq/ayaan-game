@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#0B1026">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Ayaan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <!-- The antigravity chamber: everything that floats is drawn here -->
+    <canvas id="stage" aria-label="Antigravity chamber with floating shapes"></canvas>
+
+    <!-- Top bar: home button, level + stars, instruction pill, sequence dots -->
+    <div id="topbar" class="off">
+      <div id="hud">
+        <button id="btn-home" class="icon-btn" type="button" aria-label="Home">🏠</button>
+        <div id="hud-center">
+          <div id="level-label">Level 1</div>
+          <div id="stars" aria-label="Stars earned"></div>
+        </div>
+        <div class="hud-spacer" aria-hidden="true"></div>
+      </div>
+      <div id="prompt" class="mood-watch" aria-live="polite">
+        <span id="prompt-icon" aria-hidden="true">👀</span>
+        <span id="prompt-text">Watch!</span>
+      </div>
+      <div id="dots" aria-hidden="true"></div>
+    </div>
+
+    <button id="btn-sound" class="icon-btn" type="button" aria-label="Sound on or off">🔊</button>
+
+    <!-- Home -->
+    <section id="screen-home" class="screen">
+      <div class="panel">
+        <h1 class="title" aria-label="Ayaan">
+          <span class="c1">A</span><span class="c2">y</span><span class="c3">a</span><span class="c4">a</span><span class="c5">n</span>
+        </h1>
+        <p class="subtitle">Antigravity Memory</p>
+        <button id="btn-play" class="btn" type="button">▶ Play</button>
+        <p id="home-level" class="small">Level 1</p>
+      </div>
+    </section>
+
+    <!-- Level complete -->
+    <section id="screen-level" class="screen hidden">
+      <div class="panel">
+        <div class="big-emoji" aria-hidden="true">🌟</div>
+        <h2 id="level-title" class="headline">Level 1 done!</h2>
+        <div id="level-stars" class="star-row" aria-hidden="true"></div>
+        <button id="btn-next" class="btn" type="button">Next ▶</button>
+      </div>
+    </section>
+
+    <!-- All levels complete -->
+    <section id="screen-done" class="screen hidden">
+      <div class="panel">
+        <div class="big-emoji" aria-hidden="true">🚀</div>
+        <h2 class="headline">You did it, Ayaan!</h2>
+        <p class="subtitle">You are a space memory champion!</p>
+        <button id="btn-again" class="btn" type="button">↻ Play again</button>
+      </div>
+    </section>
+  </main>
+
+  <noscript>Ayaan needs JavaScript to run.</noscript>
+  <script src="script.js"></script>
+</body>
+</html>
